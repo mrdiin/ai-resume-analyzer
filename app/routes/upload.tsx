@@ -77,6 +77,7 @@ const upload = () => {
     await kv.set(`resumeId:${uuid}`, JSON.stringify(data));
 
     setStatusText('Your resume is analyzed! Redirecting to the results page...');
+    navigate(`/resume/${uuid}`);
   };
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
