@@ -119,7 +119,7 @@ const upload = () => {
     }
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+      if (cleanupPromises.length > 0) await Promise.allSettled(cleanupPromises);
     e.preventDefault();
     const form = e.currentTarget.closest('form');
     if (!form) return;
